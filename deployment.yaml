@@ -1,21 +1,21 @@
-         apiVersion: apps/v1
-         kind: Deployment
-         metadata:
-           name: mydeployment
-           labels:
-             app: frontend
-         spec:
-           replicas: 2
-           selector:
-             matchLabels:
-               app: frontend
-           template:
-             metadata: mypod
-               labels:
-                 app: frontend
-             spec:
-               containers:
-                 - name: mycontainer
-                   image: devops01docker/test
-                   ports:
-                    - containerPort: 80
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mydeploy
+  labels:
+    app: myimage
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: myimage
+  template:
+    metadata:
+      labels:
+        app: myimage
+    spec:
+      containers:
+      - name: mycontainer
+        image: devops01docker/test1
+        ports:
+        - containerPort: 80
