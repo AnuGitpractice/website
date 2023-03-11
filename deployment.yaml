@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: mycontainer
-        image: devops01docker/test1
+        image: devops01docker/test2
         ports:
         - containerPort: 80
