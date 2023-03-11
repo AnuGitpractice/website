@@ -1,0 +1,21 @@
+         apiVersion: apps/v1
+         kind: Deployment
+         metadata:
+           name: mydeployment
+           labels:
+             app: frontend
+         spec:
+           replicas: 2
+           selector:
+             matchLabels:
+               app: frontend
+           template:
+             metadata: mypod
+               labels:
+                 app: frontend
+             spec:
+               containers:
+                 - name: mycontainer
+                   image: 
+                   ports:
+                    - containerPort: 80
